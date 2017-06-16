@@ -28,9 +28,11 @@ public class HomeController {
     @RequestMapping("/productList")
     // we defined a function which imported model parameter
     public String getProducts(Model model) {
+        //LIST that fetched fro the productDAO
         List<Product> productList = productDao.getProductList();
         //return first product from the list
         Product product = productList.get(0);
+        //attach this product to the Model
         model.addAttribute(product);
 
         return "productList";
