@@ -29,11 +29,11 @@ public class HomeController {
     // we defined a function which imported model parameter
     public String getProducts(Model model) {
         //LIST that fetched fro the productDAO
-        List<Product> productList = productDao.getProductList();
-        //return first product from the list
-        Product product = productList.get(0);
+        List<Product> products = productDao.getProductList();
+
         //attach this product to the Model
-        model.addAttribute(product);
+        //first argument is a String and second is instance
+        model.addAttribute("products", products);
 
         return "productList";
     }
