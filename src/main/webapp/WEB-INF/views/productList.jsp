@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: The Revenant
@@ -76,21 +77,25 @@
         </div>
         <table class="table table-stripped table-hover">
             <thead>
-                <tr class="bg-success">
-                    <th>Photo thumb</th>
-                    <th>Product Name</th>
-                    <th>Category</th>
-                    <th>Condition</th>
-                    <th>Price</th>
-                </tr>
+            <tr class="bg-success">
+                <th>Photo thumb</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Condition</th>
+                <th>Price</th>
+            </tr>
             </thead>
+            <%--standart js library (c:) and products is the productList--%>
+            <%--that we attachet to the model--%>
+            <c:forEach items="${products}" var="product">
                 <tr>
-                    <td><img src="#" alt="image" /></td>
+                    <td><img src="#" alt="image"/></td>
                     <td>${product.productName}</td>
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
                 </tr>
+            </c:forEach>
         </table>
         <!-- FOOTER -->
         <footer>
