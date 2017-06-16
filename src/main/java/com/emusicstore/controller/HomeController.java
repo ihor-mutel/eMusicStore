@@ -33,7 +33,7 @@ public class HomeController {
         Product product = productList.get(0);
         model.addAttribute(product);
 
-        return "ProductList";
+        return "productList";
     }
 }
 

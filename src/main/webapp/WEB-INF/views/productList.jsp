@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: The Revenant
@@ -11,6 +12,21 @@
     <title>Title</title>
 </head>
 <body>
-
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Condition</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>${product.productName}</td>
+            <td>${product.productCategory}</td>
+            <td>${product.productCondition}</td>
+            <td>${product.productPrice}</td>
+        </tr>
+    </table>
 </body>
 </html>
