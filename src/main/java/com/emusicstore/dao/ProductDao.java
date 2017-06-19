@@ -2,6 +2,7 @@ package com.emusicstore.dao;
 
 import com.emusicstore.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,4 +50,12 @@ public class ProductDao {
 
        return productList;
    }
+        public Product getProductById(String productId) throws IOException{
+            for (Product product: getProductList()) {//define loop through the instances of the product
+                if(product.getProductId().equals(productId)){
+                    return product;
+                }
+            throw new IOException("No product found");
+            }
+        }
 }
