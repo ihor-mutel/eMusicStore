@@ -4,6 +4,7 @@ import com.emusicstore.dao.ProductDao;
 import com.emusicstore.model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -37,8 +38,12 @@ public class HomeController {
 
         return "productList";
     }
-    @RequestMapping("/productList/viewProduct")
-    public String viewProduct(){
+
+    //explanation in chapter 004 video 007 at 10:00
+    @RequestMapping("/productList/viewProduct/{productId}") //add path variable
+    public String viewProduct(@PathVariable String productId, Model model){ //grab varible value from the path and define the model
+        Product product = ProductDao.GetProductById(productId); //create new instance of product (from data accessing object) and pass id
+        model.addAttribute(product); //attach the product to the model
         return "viewProduct";
     }
 }
