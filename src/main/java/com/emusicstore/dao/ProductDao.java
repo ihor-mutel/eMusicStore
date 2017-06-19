@@ -13,16 +13,16 @@ public class ProductDao {
    private List<Product> productList;
 
    public List<Product> getProductList() {
-       Product productctl = new Product();
-       productctl.setProductId("P123");
-       productctl.setProductName("Guitar1");
-       productctl.setProductCategory("Instrument");
-       productctl.setProductDescription("This is a fender start guitar!");
-       productctl.setProductPrice(1200);
-       productctl.setProductCondition("new");
-       productctl.setProductStatus("Active");
-       productctl.setUnitInStock(11);
-       productctl.setPruductManufacturer("Fender");
+       Product productct1 = new Product();
+       productct1.setProductId("P123");
+       productct1.setProductName("Guitar1");
+       productct1.setProductCategory("Instrument");
+       productct1.setProductDescription("This is a fender start guitar!");
+       productct1.setProductPrice(1200);
+       productct1.setProductCondition("new");
+       productct1.setProductStatus("Active");
+       productct1.setUnitInStock(11);
+       productct1.setProductManufacturer("Fender");
 
        Product productct2 = new Product();
        productct2.setProductId("P124");
@@ -33,10 +33,10 @@ public class ProductDao {
        productct2.setProductCondition("new");
        productct2.setProductStatus("Active");
        productct2.setUnitInStock(51);
-       productct2.setPruductManufacturer("EMI");
+       productct2.setProductManufacturer("EMI");
 
        Product productct3 = new Product();
-       productct2.setProductId("P125");
+       productct3.setProductId("P125");
        productct3.setProductName("Speaker");
        productct3.setProductCategory("Accessory");
        productct3.setProductDescription("This is a Polk Shelf Speaker!");
@@ -44,18 +44,18 @@ public class ProductDao {
        productct3.setProductCondition("new");
        productct3.setProductStatus("Active");
        productct3.setUnitInStock(9);
-       productct3.setPruductManufacturer("Polk");
+       productct3.setProductManufacturer("Polk");
 
        productList=new ArrayList<Product>();
-       productList.add(productctl);
+       productList.add(productct1);
        productList.add(productct2);
        productList.add(productct3);
 
        return productList;
    }
-        public Product getProductById(String productId) throws IOException{
+        public Product getProductById(String ProductId) throws IOException{
             for (Product product: getProductList()) {//define loop through the instances of the product
-                if(product.getProductId().equals(productId)){
+                if(product.getProductId().equals(ProductId)){
                     return product;
                 }
             }
