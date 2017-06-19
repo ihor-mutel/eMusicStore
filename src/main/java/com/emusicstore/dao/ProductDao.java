@@ -55,7 +55,7 @@ public class ProductDao {
                 if(product.getProductId().equals(productId)){
                     return product;
                 }
-            throw new IOException("No product found");
             }
+            throw new IOException("No product found");
         }
 }
