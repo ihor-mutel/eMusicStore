@@ -4,6 +4,17 @@ package com.emusicstore.model;
  * Created by The Revenant on 6/16/2017.
  */
 public class Product {
+
+    private String ProductId;
+
+    public String getProductId() {
+        return ProductId;
+    }
+
+    public void setProductId(String productId) {
+        ProductId = productId;
+    }
+
     private String productName;
     private String productCategory;
     private String productDescription;
