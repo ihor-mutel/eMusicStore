@@ -16,6 +16,7 @@
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
+                <th></th>
             </tr>
             </thead>
             <%--standart js library (c:) and products is the productList--%>
@@ -27,6 +28,7 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
+                    <td><span class="glyphicon glyphicon-info-sign"></span></td>
                 </tr>
             </c:forEach>
         </table>
