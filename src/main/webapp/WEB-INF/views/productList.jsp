@@ -1,4 +1,5 @@
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%> <%--import spring tags--%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> <%--import spring tags--%>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
 
@@ -28,7 +29,8 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
-                    <td><span class="glyphicon glyphicon-info-sign"></span></td>
+                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
+                    ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>
             </c:forEach>
         </table>
