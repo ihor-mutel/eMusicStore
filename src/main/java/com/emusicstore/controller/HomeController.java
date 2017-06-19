@@ -41,11 +41,13 @@ public class HomeController {
     }
 
     //explanation in chapter 004 video 007 at 10:00
-    @RequestMapping("/productList/viewProduct/{productId}") //add path variable
-    public String viewProduct(@PathVariable String productId, Model model) throws IOException{ //grab varible value from the path and define the model
-        Product product = ProductDao.getProductById(productId); //create new instance of product (from data accessing object) and pass id
-        model.addAttribute(product); //attach the product to the model
+    @RequestMapping("/productList/viewProduct/{productId}")
+    public String viewProduct(@PathVariable String productId, Model model) throws IOException {
+        Product product = productDao.getProductById(productId);
+        model.addAttribute(product);
+
         return "viewProduct";
     }
+
 }
 
